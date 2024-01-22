@@ -1,0 +1,66 @@
+{
+    "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+    },
+    "kind": "StorageV2",
+    "id": "/subscriptions/e13f5e93-0148-4c37-87f6-f11b59208f43/resourceGroups/Gruppo2-PW/providers/Microsoft.Storage/storageAccounts/sapw2g2",
+    "name": "sapw2g2",
+    "type": "Microsoft.Storage/storageAccounts",
+    "location": "northeurope",
+    "tags": {
+        "Creator": "Ariele Bernasconi",
+        "Scope": "Project Work 2"
+    },
+    "properties": {
+        "dnsEndpointType": "Standard",
+        "defaultToOAuthAuthentication": false,
+        "publicNetworkAccess": "Enabled",
+        "keyCreationTime": {
+            "key1": "2024-01-22T08:45:19.0252896Z",
+            "key2": "2024-01-22T08:45:19.0252896Z"
+        },
+        "allowCrossTenantReplication": false,
+        "privateEndpointConnections": [],
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": false,
+        "allowSharedKeyAccess": true,
+        "largeFileSharesState": "Enabled",
+        "networkAcls": {
+            "bypass": "AzureServices",
+            "virtualNetworkRules": [],
+            "ipRules": [],
+            "defaultAction": "Allow"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+            "requireInfrastructureEncryption": false,
+            "services": {
+                "file": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2024-01-22T08:45:19.1659783Z"
+                },
+                "blob": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2024-01-22T08:45:19.1659783Z"
+                }
+            },
+            "keySource": "Microsoft.Storage"
+        },
+        "accessTier": "Cool",
+        "provisioningState": "Succeeded",
+        "creationTime": "2024-01-22T08:45:18.8846916Z",
+        "primaryEndpoints": {
+            "dfs": "https://sapw2g2.dfs.core.windows.net/",
+            "web": "https://sapw2g2.z16.web.core.windows.net/",
+            "blob": "https://sapw2g2.blob.core.windows.net/",
+            "queue": "https://sapw2g2.queue.core.windows.net/",
+            "table": "https://sapw2g2.table.core.windows.net/",
+            "file": "https://sapw2g2.file.core.windows.net/"
+        },
+        "primaryLocation": "northeurope",
+        "statusOfPrimary": "available"
+    }
+}
