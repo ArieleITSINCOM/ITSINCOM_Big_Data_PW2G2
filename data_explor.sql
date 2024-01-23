@@ -1,0 +1,85 @@
+/*
+Data Explor
+*/
+--------------------------------------------------------------------------------------------------------------------------------------------
+/*stg.BC_nation1*/
+-- SELECT TOP 8000 * FROM [stg].[BC_nation1] ORDER BY NEWID(), year -- 51.408 rows
+/*
+measure: what the row means e.g. deaths, incidence, rate
+- HOW ARE THE RATIOS CALCULATED? AGE? REGION?
+    - measure:
+        - incidence: portion of population affected
+        - deaths: no. of death
+    - location: the observed nation
+    - sex: the genders observed
+    - age:
+        - all ages: s.e.
+        - Age-standardized: age is processed in ways that makes ages more comparable
+    
+    - val: avg of the value (cases/deaths?)
+        - upper: max of the values(?)
+        - lower: min of the values(?)
+*/
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+/*[stg].[BC_Percent1]*/
+-- select * from stg.bc_percent1 -- 5.040 rows
+/*
+    - measure: DALY, anni di "vita sana" persi per malattia https://www.who.int/data/gho/indicator-metadata-registry/imr-details/158
+    - location: date
+    - sex: genderes included in the analysis
+    - age: age group taken into account (only "All ages")
+    - cause: cause of the DALYs
+    - val: avg of the value (cases/deaths?)
+        - upper: max of the values(?)
+        - lower: min of the values(?)
+*/
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+/*[stg].[BC_predict1]*/
+-- select TOP 8000 * from [stg].[BC_predict1]
+-- ORDER BY NEWID(), year
+/*
+    - measure: as before
+    - location: only china or global
+    - sex: as before
+    - age: age interval
+    - cause: only breast cancer
+    - year s.e.
+    - val: as before
+*/
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+/*[stg].[BC_region1]*/
+-- select * from [stg].[BC_region1]
+/*
+    - measure:
+        - rate: LIKELY death rate(?)
+        - incidence: portion of population affected
+        - deaths: no. of death
+    - age:
+        - all ages: s.e.
+        - Age-standardized: age is processed in ways that makes ages more comparable
+*/
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+/*[stg].[BC_region_SDI1]*/
+-- select * from [stg].[BC_region_SDI1] -- 1008
+/*
+by article: mortality/morbidity by SDI
+504 rows are death are 504 rows are incidence
+
+for each year, 18 rows are deaths, 18 are incidence
+
+for each year and for each location death and incidence are measured, number and rate are calculated on all ages, execpt rate that is measured once more with age-standardized
+*/
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+/*[stg].[BC_region_SEX1]*/
+select * from [stg].[BC_region_SEX1] --504
+/*
+For each measure, for each gender, number and rate are calculated on all ages, execpt rate that is measured once more with age-standardized
+*/

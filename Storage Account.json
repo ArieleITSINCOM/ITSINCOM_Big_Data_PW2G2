@@ -10,7 +10,8 @@
     "location": "northeurope",
     "tags": {
         "Creator": "Ariele Bernasconi",
-        "Scope": "Project Work 2"
+        "Scope": "Data Transfer",
+        "Context": "Project Work 2"
     },
     "properties": {
         "dnsEndpointType": "Standard",
