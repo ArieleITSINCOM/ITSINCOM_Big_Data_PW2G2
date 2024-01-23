@@ -116,7 +116,7 @@ forecasts data for each location
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 /*[stg].[World_population_age_standard]*/
--- select * from [stg].[World_population_age_standard] --24 rows
+-- SELECT * FROM [stg].[World_population_age_standard] --24 rows
 /*
     - age: age group
     - std_population: std. population
