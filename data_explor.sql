@@ -79,7 +79,40 @@ for each year and for each location death and incidence are measured, number and
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 /*[stg].[BC_region_SEX1]*/
-select * from [stg].[BC_region_SEX1] --504
+-- select * from [stg].[BC_region_SEX1] --504
 /*
 For each measure, for each gender, number and rate are calculated on all ages, execpt rate that is measured once more with age-standardized
+*/
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+/*[stg].[HDI_1990]*/
+
+-- SELECT * FROM [stg].[HDI_1990] --142
+ /*
+ contains the HDI of each country in 1990
+ */
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+/*[stg].[IHME_POP_2017_2100_POP_REFERENC]*/
+-- SELECT TOP 6000 * FROM [stg].[IHME_POP_2017_2100_POP_REFERENC] --ORDER BY NEWID() -- 892.416
+
+/*SELECT sex, count(*) FROM stg.IHME_POP_2017_2100_POP_REFERENC GROUP BY sex*/ -- 50%/50% between male and female
+
+/*
+scenario name always "reference"
+measure name always "population"
+half the rows are for female and for male
+
+forecasts data for each location 
+*/
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+/*[stg].[World_population_age_standard]*/
+select * from [stg].[World_population_age_standard] --24 rows
+/*
+    - age: age group
+    - std_population: std. population
+population standards by age group
 */
