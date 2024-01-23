@@ -31,6 +31,7 @@ measure: what the row means e.g. deaths, incidence, rate
     - age: age group taken into account (only "All ages")
     - cause: cause of the DALYs
     - val: avg of the value (cases/deaths?)
+    - year: stating the SDI of that particular range of people
         - upper: max of the values(?)
         - lower: min of the values(?)
 */
