@@ -177,7 +177,6 @@ select * from [stg].[BC_region_SDI1]
 -- cast region_sex
 SELECT 
     CAST([measure]  AS NVARCHAR(15)) AS [measure],
-    CAST([location] AS NVARCHAR(35)) AS [location],
     CAST([sex] AS NVARCHAR(8)) AS [sex],
     CAST([age] AS NVARCHAR(25)) AS [age],
     CAST([cause] AS NVARCHAR(20)) AS [cause],
