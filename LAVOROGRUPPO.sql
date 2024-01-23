@@ -25,12 +25,29 @@ SELECT
         ELSE 
             CAST([measure] AS NVARCHAR(40))
     END AS [measure],
-    CAST([location] AS NVARCHAR(5)) AS [location],
+    CAST([location] AS NVARCHAR(5)) AS [year],
     CAST([sex] AS NVARCHAR(10)) AS [sex],
     CAST([age] AS NVARCHAR(15)) AS [age],
     CAST([cause] AS NVARCHAR(30)) AS [cause],
     CAST([metric] AS NVARCHAR(13)) AS [metric],
-    CAST([year] AS CHAR(4)) AS [year],
+	CAST(
+	CASE 
+
+		when year = 'G' then 'Global'
+
+		when year = 'L' then 'Low'
+
+		when year = 'LM' then 'Low-Middle'
+
+		when year = 'M' then 'Middle'
+
+		when year = 'H' then 'High'
+
+		when year = 'HM' then 'High-Middle'
+
+	ELSE 'Other'
+
+	END  as varchar(11)) as Location,
     CAST(CAST([val] AS FLOAT) AS DECIMAL(15, 7)) AS [val],
     CAST(CAST([upper] AS FLOAT) AS DECIMAL(15, 7)) AS [upper],
     CAST(CAST([lower] AS FLOAT) AS DECIMAL(15, 7)) AS [lower]
@@ -92,9 +109,9 @@ SELECT
     CAST([metric_name] AS NVARCHAR(10)) AS [metric_name],
     CAST([scenario] AS NVARCHAR(2)) AS [scenario],
     CAST([scenario_name] AS NVARCHAR(15)) AS [scenario_name],
-    CAST(CAST([val] AS FLOAT) AS DECIMAL(15, 7)) AS [val],
-    CAST(CAST([upper] AS FLOAT) AS DECIMAL(15, 4)) AS [upper],
-    CAST(CAST([lower] AS FLOAT) AS DECIMAL(15, 4)) AS [lower]
+    CAST([val] AS FLOAT) AS [val],
+    CAST([upper] AS FLOAT)  AS [upper],
+    CAST([lower] AS FLOAT)  AS [lower]
 FROM [stg].[IHME_POP_2017_2100_POP_REFERENC]
 
 
