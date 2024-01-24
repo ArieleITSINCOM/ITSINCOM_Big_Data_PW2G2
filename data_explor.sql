@@ -8,9 +8,11 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
 /*stg.BC_nation1*/
 -- SELECT TOP 8000 * FROM [stg].[BC_nation1] ORDER BY NEWID(), year -- 51.408 rows
+select count(*) from stg.BC_nation1
 /*
+the cases are counted
 measure: what the row means e.g. deaths, incidence, rate
-- HOW ARE THE RATIOS CALCULATED? AGE? REGION?
+- HOW ARE THE RATIOS CALCULATED? AGE? REGION? --> likely by location
     - measure:
         - incidence: portion of population affected
         - deaths: no. of death
@@ -29,6 +31,8 @@ measure: what the row means e.g. deaths, incidence, rate
 /*[stg].[BC_Percent1]*/
 -- SELECT * FROM stg.bc_percent1 -- 5.040 rows
 /*
+for each measure (DALYs, Deaths), calculates number, percent, rate using ALL ages
+
     - measure: DALY, anni di "vita sana" persi per malattia https://www.who.int/data/gho/indicator-metadata-registry/imr-details/158
     - location: date
     - sex: genderes included in the analysis
@@ -38,14 +42,14 @@ measure: what the row means e.g. deaths, incidence, rate
     - year: stating the SDI of that particular range of people
         - upper: max of the values(?)
         - lower: min of the values(?)
+    - 
 */
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
 /*[stg].[BC_predict1]*/
--- SELECT TOP 8000 * FROM [stg].[BC_predict1]
--- ORDER BY NEWID(), year
+-- SELECT TOP 8000 * FROM [stg].[BC_predict1] ORDER BY NEWID(), year -- 41.832
 /*
     - measure: as before
     - location: only china or global
@@ -58,8 +62,11 @@ measure: what the row means e.g. deaths, incidence, rate
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 /*[stg].[BC_region1]*/
--- SELECT * FROM [stg].[BC_region1]
+-- SELECT * FROM [stg].[BC_region1] -- 3.696
 /*
+for each year and for each location death and incidence are measured, number and rate are calculated on all ages, execpt rate that is measured once more with age-standardized
+
+
     - measure:
         - rate: LIKELY death rate(?)
         - incidence: portion of population affected
@@ -99,6 +106,7 @@ For each measure, for each gender, number and rate are calculated on all ages, e
  contains the HDI of each country in 1990
  */
 
+
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 /*[stg].[IHME_POP_2017_2100_POP_REFERENC]*/
@@ -122,3 +130,4 @@ forecasts data for each location
     - std_population: std. population
 population standards by age group
 */
+

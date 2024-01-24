@@ -196,12 +196,21 @@ select * from [stg].[BC_region_SDI1]
 -- cast region_sex
 Create view region_sex as 
 SELECT 
+<<<<<<< HEAD
     CAST([measure]  AS VARCHAR(15)) AS [measure],
     CAST([sex] AS VARCHAR(8)) AS [sex],
     CAST([age] AS VARCHAR(25)) AS [age],
     CAST([cause] AS VARCHAR(20)) AS [cause],
     CAST([metric] AS VARCHAR(15)) AS [metric],
     CAST([year] AS VARCHAR(10)) AS [year],
+=======
+    CAST([measure]  AS NVARCHAR(15)) AS [measure],
+    CAST([sex] AS NVARCHAR(8)) AS [sex],
+    CAST([age] AS NVARCHAR(25)) AS [age],
+    CAST([cause] AS NVARCHAR(20)) AS [cause],
+    CAST([metric] AS NVARCHAR(15)) AS [metric],
+    CAST([year] AS NVARCHAR(10)) AS [year],
+>>>>>>> 55887bb5c57c0daaab1c382c3f7882666fb93976
     CAST(CAST([val] AS FLOAT) AS DECIMAL(15, 7)) AS [val],
     CAST(CAST([upper] AS FLOAT) AS DECIMAL(15, 7)) AS [upper],
     CAST(CAST([lower] AS FLOAT) AS DECIMAL(15, 7)) AS [lower]
