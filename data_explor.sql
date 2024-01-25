@@ -31,7 +31,7 @@ measure: what the row means e.g. deaths, incidence, rate
 /*[stg].[BC_Percent1]*/
 -- SELECT * FROM stg.bc_percent1 -- 5.040 rows
 /*
-for each measure (DALYs, Deaths), calculates number, percent, rate using ALL ages
+for each measure (DALYs, Deaths), calculates number, percent, rate using ALL ages on based on sdi location and time-wise on a (likely) 6-month basis
 
     - measure: DALY, anni di "vita sana" persi per malattia https://www.who.int/data/gho/indicator-metadata-registry/imr-details/158
     - location: date
