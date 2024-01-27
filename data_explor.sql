@@ -61,20 +61,24 @@ for each measure (DALYs, Deaths), calculates number, percent, rate using ALL age
 */
 --------------------------------------------------------------------------------------------------------------------------------------------
 
+
 /*[stg].[BC_region1]*/
 -- SELECT * FROM [stg].[BC_region1] -- 3.696
+-- SELECT * FROM [dwh].[region]
 /*
-for each year and for each location death and incidence are measured, number and rate are calculated on all ages, execpt rate that is measured once more with age-standardized
-
+for each year and for each location death and incidence are measured, number and rate are calculated on all ages, execpt "rate" that is measured once more with age-standardized
 
     - measure:
         - rate: LIKELY death rate(?)
         - incidence: portion of population affected
         - deaths: no. of death
-    - age:
+    - location: subcontinental region
+	- age:
         - all ages: s.e.
         - Age-standardized: age is processed in ways that makes ages more comparable
+    
 */
+
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
