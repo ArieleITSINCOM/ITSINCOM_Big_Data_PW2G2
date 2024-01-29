@@ -5,10 +5,10 @@
     - The quintiles of the SDI index are used to define low (~20), low-middle (~40), middle (~60), middle-high (~80) and high (~100) SDI countries in 201927
     - 
 */
+
 --------------------------------------------------------------------------------------------------------------------------------------------
 /*stg.BC_nation1*/
 -- SELECT TOP 8000 * FROM [stg].[BC_nation1] ORDER BY NEWID(), year -- 51.408 rows
-select count(*) from stg.BC_nation1
 /*
 the cases are counted
 measure: what the row means e.g. deaths, incidence, rate
@@ -29,8 +29,9 @@ measure: what the row means e.g. deaths, incidence, rate
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 /*[stg].[BC_Percent1]*/
--- SELECT * FROM stg.bc_percent1 -- 5.040 rows
-/*
+-- SELECT * FROM [stg].[bc_percent1] -- 5.040 rows
+-- SELECT * FROM [dwh].[percent1]
+/*-
 for each measure (DALYs, Deaths), calculates number, percent, rate using ALL ages on based on sdi location and time-wise on a (likely) 6-month basis
 
     - measure: DALY, anni di "vita sana" persi per malattia https://www.who.int/data/gho/indicator-metadata-registry/imr-details/158
@@ -61,20 +62,24 @@ for each measure (DALYs, Deaths), calculates number, percent, rate using ALL age
 */
 --------------------------------------------------------------------------------------------------------------------------------------------
 
+
 /*[stg].[BC_region1]*/
 -- SELECT * FROM [stg].[BC_region1] -- 3.696
+-- SELECT * FROM [dwh].[region]
 /*
-for each year and for each location death and incidence are measured, number and rate are calculated on all ages, execpt rate that is measured once more with age-standardized
-
+for each year and for each location death and incidence are measured, number and rate are calculated on all ages, execpt "rate" that is measured once more with age-standardized
 
     - measure:
         - rate: LIKELY death rate(?)
         - incidence: portion of population affected
         - deaths: no. of death
-    - age:
+    - location: subcontinental region
+	- age:
         - all ages: s.e.
         - Age-standardized: age is processed in ways that makes ages more comparable
+
 */
+
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 

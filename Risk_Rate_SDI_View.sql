@@ -25,9 +25,4 @@ P.[age] = 'All ages'
 and 
 R.[age] = 'All ages'
  
-select * from dwh.test_amlù
-
-
-select distinct location from [ml].[region_sdi]
-
-select distinct location from [ml].[Percent1]
+select * from dwh.test_aml
