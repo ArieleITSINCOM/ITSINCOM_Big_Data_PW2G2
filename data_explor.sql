@@ -9,6 +9,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
 /*stg.BC_nation1*/
 -- SELECT TOP 8000 * FROM [stg].[BC_nation1] ORDER BY NEWID(), year -- 51.408 rows
+
 /*
 the cases are counted
 measure: what the row means e.g. deaths, incidence, rate
