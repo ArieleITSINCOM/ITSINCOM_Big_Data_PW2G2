@@ -1,0 +1,22 @@
+{
+    "kind": "v12.0",
+    "properties": {
+        "administratorLogin": "group2_admin_pw2",
+        "version": "12.0",
+        "state": "Ready",
+        "fullyQualifiedDomainName": "pw2-g2-y2-sqlserver.database.windows.net",
+        "privateEndpointConnections": [],
+        "minimalTlsVersion": "1.2",
+        "publicNetworkAccess": "Enabled",
+        "restrictOutboundNetworkAccess": "Disabled"
+    },
+    "location": "northeurope",
+    "tags": {
+        "Context": "Project Work 2",
+        "Scope": "Data Storage",
+        "Creator": "Ariele Bernasconi"
+    },
+    "id": "/subscriptions/e13f5e93-0148-4c37-87f6-f11b59208f43/resourceGroups/Gruppo2-PW/providers/Microsoft.Sql/servers/pw2-g2-y2-sqlserver",
+    "name": "pw2-g2-y2-sqlserver",
+    "type": "Microsoft.Sql/servers"
+}

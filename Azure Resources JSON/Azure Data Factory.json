@@ -1,0 +1,29 @@
+{
+    "name": "PW2Y2DataFactory",
+    "id": "/subscriptions/e13f5e93-0148-4c37-87f6-f11b59208f43/resourceGroups/gruppo2-pw/providers/Microsoft.DataFactory/factories/pw2y2datafactory",
+    "type": "Microsoft.DataFactory/factories",
+    "properties": {
+        "provisioningState": "Succeeded",
+        "createTime": "2024-01-22T09:08:27.1065289Z",
+        "version": "2018-06-01",
+        "factoryStatistics": {
+            "totalResourceCount": 0,
+            "maxAllowedResourceCount": 0,
+            "factorySizeInGbUnits": 0,
+            "maxAllowedFactorySizeInGbUnits": 0
+        },
+        "publicNetworkAccess": "Enabled"
+    },
+    "eTag": "\"e104ef8d-0000-0c00-0000-65ae308b0000\"",
+    "location": "northeurope",
+    "identity": {
+        "type": "SystemAssigned",
+        "principalId": "08d3a7e6-4410-46c3-825e-9a4253a29fd7",
+        "tenantId": "552bed02-4512-450c-858d-84cfe2b4186d"
+    },
+    "tags": {
+        "Creator": "Ariele Bernasconi",
+        "Context": "Project Work 2",
+        "Scope": "Data Transfer"
+    }
+}

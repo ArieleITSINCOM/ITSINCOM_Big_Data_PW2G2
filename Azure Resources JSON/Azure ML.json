@@ -1,0 +1,61 @@
+{
+    "id": "/subscriptions/e13f5e93-0148-4c37-87f6-f11b59208f43/resourceGroups/Gruppo2-PW/providers/Microsoft.MachineLearningServices/workspaces/pwy2g2_machine_learning",
+    "name": "pwy2g2_machine_learning",
+    "type": "Microsoft.MachineLearningServices/workspaces",
+    "location": "northeurope",
+    "tags": {
+        "Context": "Project Work 2",
+        "Creator": "Ariele Bernasconi",
+        "Scope": "Machine Learning"
+    },
+    "etag": null,
+    "properties": {
+        "friendlyName": "pwy2g2_machine_learning",
+        "description": "",
+        "storageAccount": "/subscriptions/e13f5e93-0148-4c37-87f6-f11b59208f43/resourceGroups/Gruppo2-PW/providers/Microsoft.Storage/storageAccounts/pwy2g2machinel1833160519",
+        "keyVault": "/subscriptions/e13f5e93-0148-4c37-87f6-f11b59208f43/resourceGroups/Gruppo2-PW/providers/Microsoft.Keyvault/vaults/pwy2g2machinel3000290359",
+        "applicationInsights": "/subscriptions/e13f5e93-0148-4c37-87f6-f11b59208f43/resourceGroups/Gruppo2-PW/providers/Microsoft.insights/components/pwy2g2machinel0945162037",
+        "hbiWorkspace": false,
+        "tenantId": "552bed02-4512-450c-858d-84cfe2b4186d",
+        "imageBuildCompute": null,
+        "provisioningState": "Succeeded",
+        "managedNetwork": {
+            "isolationMode": "Disabled"
+        },
+        "v1LegacyMode": false,
+        "softDeleteEnabled": false,
+        "creationTime": "2024-01-24T13:52:49.8576573Z",
+        "notebookInfo": {
+            "resourceId": "faf14c2cc0e14cfabd467cb1b8b6620a",
+            "fqdn": "ml-pwy2g2machi-northeurope-3ccc05a2-9210-4e51-8601-973e75ac29be.northeurope.notebooks.azure.net",
+            "isPrivateLinkEnabled": false,
+            "notebookPreparationError": null
+        },
+        "storageHnsEnabled": false,
+        "workspaceId": "3ccc05a2-9210-4e51-8601-973e75ac29be",
+        "linkedModelInventoryArmId": null,
+        "privateLinkCount": 0,
+        "publicNetworkAccess": "Enabled",
+        "discoveryUrl": "https://northeurope.api.azureml.ms/discovery",
+        "mlFlowTrackingUri": "azureml://northeurope.api.azureml.ms/mlflow/v1.0/subscriptions/e13f5e93-0148-4c37-87f6-f11b59208f43/resourceGroups/Gruppo2-PW/providers/Microsoft.MachineLearningServices/workspaces/pwy2g2_machine_learning",
+        "sdkTelemetryAppInsightsKey": "aea5acff-0312-49cc-a3e2-8a4470df11d5"
+    },
+    "identity": {
+        "type": "SystemAssigned",
+        "principalId": "3638472e-cb90-4833-80c4-442347a89319",
+        "tenantId": "552bed02-4512-450c-858d-84cfe2b4186d"
+    },
+    "kind": "Default",
+    "sku": {
+        "name": "Basic",
+        "tier": "Basic"
+    },
+    "systemData": {
+        "createdAt": "2024-01-24T13:52:49.8576573Z",
+        "createdBy": "ariele.bernasconi@itsincom.it",
+        "createdByType": "User",
+        "lastModifiedAt": "2024-01-24T13:52:49.8576573Z",
+        "lastModifiedBy": "ariele.bernasconi@itsincom.it",
+        "lastModifiedByType": "User"
+    }
+}
