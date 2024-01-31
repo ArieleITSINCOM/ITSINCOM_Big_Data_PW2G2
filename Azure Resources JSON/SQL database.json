@@ -1,0 +1,48 @@
+{
+    "sku": {
+        "name": "GP_S_Gen5",
+        "tier": "GeneralPurpose",
+        "family": "Gen5",
+        "capacity": 1
+    },
+    "kind": "v12.0,user,vcore,serverless",
+    "properties": {
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": 34359738368,
+        "status": "Online",
+        "databaseId": "6438f76b-e660-42c9-a935-aeb4c37d9977",
+        "creationDate": "2024-01-22T09:24:56.447Z",
+        "currentServiceObjectiveName": "GP_S_Gen5_1",
+        "requestedServiceObjectiveName": "GP_S_Gen5_1",
+        "defaultSecondaryLocation": "westeurope",
+        "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+        "zoneRedundant": false,
+        "maxLogSizeBytes": 193273528320,
+        "earliestRestoreDate": "2024-01-24T14:09:12.3055766Z",
+        "readScale": "Disabled",
+        "currentSku": {
+            "name": "GP_S_Gen5",
+            "tier": "GeneralPurpose",
+            "family": "Gen5",
+            "capacity": 1
+        },
+        "autoPauseDelay": 60,
+        "currentBackupStorageRedundancy": "Local",
+        "requestedBackupStorageRedundancy": "Local",
+        "minCapacity": 0.5,
+        "resumedDate": "2024-01-31T07:52:50.113Z",
+        "maintenanceConfigurationId": "/subscriptions/e13f5e93-0148-4c37-87f6-f11b59208f43/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+        "isLedgerOn": false,
+        "isInfraEncryptionEnabled": false,
+        "availabilityZone": "NoPreference"
+    },
+    "location": "northeurope",
+    "tags": {
+        "Context": "Project Work 2",
+        "Scope": "Data Storage",
+        "Creator": "Ariele Bernasconi"
+    },
+    "id": "/subscriptions/e13f5e93-0148-4c37-87f6-f11b59208f43/resourceGroups/Gruppo2-PW/providers/Microsoft.Sql/servers/pw2-g2-y2-sqlserver/databases/BC_Data",
+    "name": "BC_Data",
+    "type": "Microsoft.Sql/servers/databases"
+}
