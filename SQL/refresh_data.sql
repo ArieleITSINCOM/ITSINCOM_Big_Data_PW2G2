@@ -2,11 +2,14 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-ALTER PROCEDURE [dbo].[refreshdata] 
+
+CREATE  PROCEDURE [dbo].[refreshdata] 
 AS 
 BEGIN 
+    -- Declaration for dynamic SQL string
     DECLARE @sqlNation NVARCHAR(MAX) = '';
 
+    -- Building dynamic SQL for [dwh].[nation] view
     SELECT @sqlNation +=
         'UNION ALL SELECT '+ 
             'CAST([measure] AS NVARCHAR(15)) AS [measure],'+
@@ -28,15 +31,16 @@ BEGIN
     FROM sys.tables
     WHERE name LIKE 'BC_nation%';
 
-    -- Rimuovi il primo "UNION ALL"
+    -- Remove the first "UNION ALL"
     SET @sqlNation = STUFF(@sqlNation, 1, 10, '');
 
-    -- Aggiungi il resto del comando ALTER VIEW
+    -- Add the rest of the ALTER VIEW command
     SET @sqlNation = 'ALTER VIEW [dwh].[nation] AS ' + @sqlNation;
 
-    -- Esegui la query dinamica
+    -- Execute dynamic SQL query
     EXEC sp_executesql @sqlNation;
-    -- percent view 
+
+    -- Dynamic SQL for [dwh].[percent1] view 
     DECLARE @sqlpercent NVARCHAR(MAX) = '';
 
     SELECT @sqlpercent +=
@@ -70,15 +74,16 @@ BEGIN
     FROM sys.tables
     WHERE name LIKE 'BC_Percent%';
 
-    -- Rimuovi il primo "UNION ALL"
+    -- Remove the first "UNION ALL"
     SET @sqlpercent = STUFF(@sqlpercent, 1, 10, '');
 
-    -- Aggiungi il resto del comando ALTER VIEW
+    -- Add the rest of the ALTER VIEW command
     SET @sqlpercent = 'ALTER VIEW [dwh].[percent1] AS ' + @sqlpercent;
 
-    -- Esegui la query dinamica
+    -- Execute dynamic SQL query
     EXEC sp_executesql @sqlpercent;
-    -- PREDICT 
+
+    -- Dynamic SQL for [dwh].[predict] view 
     DECLARE @sqlpredict NVARCHAR(MAX) = ' ';
 
     SELECT @sqlpredict +=
@@ -97,15 +102,16 @@ BEGIN
     FROM sys.tables
     WHERE name LIKE 'BC_predict%';
 
-     -- Rimuovi il primo "UNION ALL"
+    -- Remove the first "UNION ALL"
     SET @sqlpredict = STUFF(@sqlpredict, 1, 10, '');
 
-    -- Aggiungi il resto del comando ALTER VIEW
+    -- Add the rest of the ALTER VIEW command
     SET @sqlpredict = 'ALTER VIEW [dwh].[predict] AS ' + @sqlpredict;
 
-    -- Esegui la query dinamica
+    -- Execute dynamic SQL query
     EXEC sp_executesql @sqlpredict;
-    -- region
+
+    -- Dynamic SQL for [dwh].[region] view 
     DECLARE @sqlregion NVARCHAR(MAX) = ' ';
 
     SELECT @sqlregion +=
@@ -124,15 +130,16 @@ BEGIN
     FROM sys.tables
     WHERE name like 'BC_region_';
 
-    -- Rimuovi il primo "UNION ALL"
+    -- Remove the first "UNION ALL"
     SET @sqlregion = STUFF(@sqlregion, 1, 10, '');
 
-    -- Aggiungi il resto del comando ALTER VIEW
+    -- Add the rest of the ALTER VIEW command
     SET @sqlregion = 'ALTER VIEW [dwh].[region] AS ' + @sqlregion;
 
-    -- Esegui la query dinamica
+    -- Execute dynamic SQL query
     EXEC sp_executesql @sqlregion;
-    -- region_SDI 
+
+    -- Dynamic SQL for [dwh].[region_sdi] view 
     DECLARE @sqlregion_sdi NVARCHAR(MAX) = '';
 
     SELECT @sqlregion_sdi +=
@@ -151,16 +158,16 @@ BEGIN
     FROM sys.tables
     WHERE name LIKE 'BC_region_SDI%';
 
-    -- Rimuovi il primo "UNION ALL"
+    -- Remove the first "UNION ALL"
     SET @sqlregion_sdi = STUFF(@sqlregion_sdi, 1, 10, '');
 
-    -- Aggiungi il resto del comando ALTER VIEW
+    -- Add the rest of the ALTER VIEW command
     SET @sqlregion_sdi = 'ALTER VIEW [dwh].[region_sdi] AS ' + @sqlregion_sdi;
 
-    -- Esegui la query dinamica
+    -- Execute dynamic SQL query
     EXEC sp_executesql @sqlregion_sdi;
 
--- RegionSex
+    -- Dynamic SQL for [dwh].[region_Sex] view 
     DECLARE @sqlregion_sex NVARCHAR(MAX) = '';
 
     SELECT @sqlregion_sex +=
@@ -178,20 +185,14 @@ BEGIN
     FROM sys.tables
     WHERE name LIKE 'BC_region_SEX%';
 
-    -- Rimuovi il primo "UNION ALL"
+    -- Remove the first "UNION ALL"
     SET @sqlregion_sex = STUFF(@sqlregion_sex, 1, 10, '');
 
-    -- Aggiungi il resto del comando ALTER VIEW
+    -- Add the rest of the ALTER VIEW command
     SET @sqlregion_sex = 'ALTER VIEW [dwh].[region_Sex] AS ' + @sqlregion_sex;
 
-    -- Esegui la query dinamica
+    -- Execute dynamic SQL query
     EXEC sp_executesql @sqlregion_sex;
 
 END;
-
-
-
-
-exec dbo.pippo
-
 GO

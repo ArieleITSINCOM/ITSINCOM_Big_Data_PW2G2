@@ -1,4 +1,4 @@
--- Tabella predict castata 
+-- predict cast 
 create view ml.predict as
 SELECT 
     CAST([measure]  AS NVARCHAR(20)) AS [measure],
@@ -16,7 +16,7 @@ FROM [stg].[BC_predict1]
 SELECT MAX(LEN(year)) 
     FROM [stg].[BC_predict1]
 
--- cast tabella Percent 
+-- cast Percent 
 create view ml.Percent1 as 
 SELECT
     CASE 
@@ -54,11 +54,11 @@ SELECT
 FROM [stg].[BC_Percent1];
 
 ---------------------------------------------------------------------------------------------
-SELECT *--MAX(LEN([sex])) 
+SELECT *
 FROM [stg].[BC_Percent1] AS max_length
 
 
--- cast nation 
+-- cast nation
 create view ml.nation as 
 SELECT 
     CAST([measure]  AS NVARCHAR(15)) AS [measure],
@@ -99,7 +99,6 @@ select * FROM [stg].[HDI_1990]
 SELECT DISTINCT(CAST(REPLACE(location_name COLLATE SQL_Latin1_General_CP1_CI_AS, 'C?te d''Ivoire', 'Cote d''Ivoire') AS varchar(48)))
 FROM [stg].[IHME_POP_2017_2100_POP_REFERENC];
 
--- cast [stg].[IHME_POP_2017_2100_POP_REFERENC]
 create view ml.POP_REFERENC as 
 SELECT 
     CAST([location_id] AS VARCHAR(5)) AS [location_id],
