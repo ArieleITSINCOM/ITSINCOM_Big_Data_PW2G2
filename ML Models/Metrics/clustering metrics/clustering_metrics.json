@@ -1,0 +1,13 @@
+{
+    "DBSCAN": {
+        "silhouette_score": 0.13998078999692765
+    },
+    "Birch": {
+        "silhouette_score": 0.27862623621172,
+        "davies_bouldin_score": 1.116149036849484,
+        "calinski_harabasz_score": 72.33098118249025
+    },
+    "HDBSCAN": {
+        "silhouette_score": 0.10751083765233249
+    }
+}
